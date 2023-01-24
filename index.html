@@ -37,20 +37,20 @@
         <div class="input-section">
             <div class="html-field">
                 <h3><i class="fa-brands fa-html5"></i> HTML</h3>
-                <textarea id="html-input"></textarea>
+                <textarea id="html-input" onkeyup="run()"></textarea>
             </div>
             <div class="css-field">
                 <h3><i class="fa-brands fa-css3-alt"></i> CSS</h3>
-                <textarea id="css-input"></textarea>
+                <textarea id="css-input" onkeyup="run()"></textarea>
             </div>
             <div class="js-field">
                 <h3><i class="fa-brands fa-js"></i> JS</h3>
-                <textarea id="js-input"></textarea>
+                <textarea id="js-input" onkeyup="run()"></textarea>
             </div>
         </div>
         <div class="output-section">
             <div class="output-field">
-                <textarea id="output"></textarea>
+                <iframe id="output"></iframe>
             </div>
         </div>
     </section>
@@ -61,5 +61,18 @@
         </div>
     </section>
 </body>
+
+<script>
+    function run() {
+        let htmlcode = document.getElementById("html-input").value;
+        let csscode = document.getElementById("css-input").value;
+        let jscode = document.getElementById("js-input").value;
+        let output = document.getElementById("output");
+
+        output.contentDocument.body.innerHTML = htmlcode+"<style>"+csscode+"</style>";
+        output.contentWindow.eval(jscode);
+    }
+
+</script>
 
 </html>
