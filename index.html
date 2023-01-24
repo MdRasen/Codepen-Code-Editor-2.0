@@ -25,13 +25,22 @@
         </div>
         <div class="right">
             <ul>
-                <li><a href="#"><i class="fa-solid fa-cloud"></i> Save</a></li>
-                <li><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
-                <li><a href="#"><i class="fa-solid fa-object-group"></i></a></li>
+                <li class="save"><a href="#"><i class="fa-solid fa-cloud"></i> Save</a></li>
+                <li class="settings"><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                <li class="view"><a href="#"><i class="fa-solid fa-object-group"></i></a></li>
+                <li class="submenu" onclick="openmenu()"><a href="#"><i class="fa-solid fa-square-caret-down"></i></a>
+                </li>
                 <li><a href="#" class="signup">Sign Up</a></li>
                 <li><a href="#">Log In</a></li>
             </ul>
         </div>
+
+        <!-- For Mobile Sub-Menu -->
+        <ul class="mobile-menu" id="side-menu">
+            <li class="save"><a href="#"><i class="fa-solid fa-cloud"></i> Save</a></li>
+            <li class="settings"><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            <i class="fa-solid fa-xmark close" onclick="closemenu()"></i>
+        </ul>
     </section>
     <section id="main-section">
         <div class="input-section">
@@ -69,10 +78,20 @@
         let jscode = document.getElementById("js-input").value;
         let output = document.getElementById("output");
 
-        output.contentDocument.body.innerHTML = htmlcode+"<style>"+csscode+"</style>";
+        output.contentDocument.body.innerHTML = htmlcode + "<style>" + csscode + "</style>";
         output.contentWindow.eval(jscode);
     }
+</script>
 
+<script>
+    var sidemenu = document.getElementById("side-menu");
+
+    function openmenu() {
+        sidemenu.style.right = "75px";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-400px";
+    }
 </script>
 
 </html>
