@@ -165,7 +165,7 @@ body {
         position: absolute;
         background: #5A5F73;
         width: 150px;
-        top: 60px;
+        top: 50px;
         right: -400px;
         border-radius: 4px;
         transition: right 0.5s;
