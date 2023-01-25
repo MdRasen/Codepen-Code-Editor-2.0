@@ -165,7 +165,7 @@ body {
         position: absolute;
         background: #5A5F73;
         width: 150px;
-        top: 60px;
+        top: 50px;
         right: -400px;
         border-radius: 4px;
         transition: right 0.5s;
@@ -209,8 +209,12 @@ body {
         width: 100%;
         height: 200px;
     }
+<<<<<<< HEAD
 
     .copyright {
         font-size: 14px;
     }
 }
+=======
+}
+>>>>>>> 1f27f28babf83ca0b4d79fd5ca872007766f77c3
