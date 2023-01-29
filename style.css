@@ -18,7 +18,7 @@ body {
 
 /* Header section */
 #header {
-    padding: 6px 15px;
+    padding: 5px 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -54,7 +54,7 @@ body {
 .right ul li a {
     text-decoration: none;
     background: #4b4f60;
-    padding: 6px 12px;
+    padding: 4px 8px;
     color: #fff;
     border-radius: 4px;
 }
@@ -111,7 +111,7 @@ body {
 }
 
 .output-section {
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .output-section iframe {
