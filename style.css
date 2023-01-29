@@ -177,7 +177,7 @@ body {
     .mobile-menu li {
         display: block;
         list-style: none;
-        margin: 5px 2px;
+        margin: 10px 2px;
     }
 
     .mobile-menu li a {
